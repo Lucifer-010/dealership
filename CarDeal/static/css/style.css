@@ -1,0 +1,69 @@
+/* styles.css */
+
+/* Carousel */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Spacing for text */
+}
+
+.carousel-item img {
+    border-radius: 15px; /* Rounded corners for images */
+}
+
+/* Search Bar and Filters */
+.input-group {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-control {
+    border-radius: 25px; /* Rounded corners for search bar */
+}
+
+.btn-dark {
+    border-radius: 25px; /* Rounded corners for button */
+}
+
+/* Footer */
+
+/* Set the height of the carousel to 100vh */
+.hero-carousel {
+    height: 100vh;
+}
+
+.hero-carousel .carousel-inner {
+    height: 100%;
+}
+
+.hero-carousel .carousel-item {
+    height: 100%;
+    background: #000; /* Optional: To ensure visibility of text */
+}
+
+.hero-carousel .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 15px;
+}
+
+.hero-carousel .carousel-caption-inner {
+    max-width: 600px;
+    margin: auto;
+}
+
+.hero-carousel .display-4 {
+    font-size: 4rem; /* Adjust size as needed */
+}
+
+.hero-carousel .lead {
+    font-size: 1.5rem; /* Adjust size as needed */
+}

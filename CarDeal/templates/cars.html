@@ -1,0 +1,136 @@
+{% load static %} <!-- Load the static template tag -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Car Dealership Listing</title>
+</head>
+<body>
+    {% include "./comps/nav.html" %}
+
+    <div class="container mt-20">
+        <!-- Search Bar and Filter -->
+        <div class="mb-4">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search for cars..." aria-label="Search for cars">
+                <div class="input-group-append">
+                    <button class="btn btn-dark" type="button">Search</button>
+                </div>
+            </div>
+            <div>
+                <h5>Filter by:</h5>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="priceRange">Price Range</label>
+                            <select id="priceRange" class="form-control">
+                                <option>Under $20,000</option>
+                                <option>$20,000 - $30,000</option>
+                                <option>$30,000 - $40,000</option>
+                                <option>Over $40,000</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="make">Make</label>
+                            <select id="make" class="form-control">
+                                <option>Toyota</option>
+                                <option>Honda</option>
+                                <option>Ford</option>
+                                <option>Chevrolet</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="model">Model</label>
+                            <select id="model" class="form-control">
+                                <option>All Models</option>
+                                <option>Corolla</option>
+                                <option>Civic</option>
+                                <option>Mustang</option>
+                                <option>Camaro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Apply Filters</button>
+                </form>
+            </div>
+        </div>
+
+        <h2 class="text-center text-uppercase mb-5 font-weight-bold text-dark">Exclusive Car Listings</h2>
+        <div class="row">
+            <!-- Example Car 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="https://cdn-ds.com/stock/2023-Lamborghini-Huracan-Tecnica-60th-Anniversary-Edition-Charlotte-NC/seo/ECL3587-ZHWUB6ZF9PLA25049/sz_261584/w_387/cf1286d8894933889f31db149163e10c.jpg" class="card-img-top" alt="Car">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold text-dark">Car Model</h5>
+                        <p class="card-text text-muted">Price: $20,000</p>
+                        <button class="btn btn-outline-dark btn-block btn-lg" onclick="viewDetails('1')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Car 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="https://cdn-ds.com/stock/2023-Lamborghini-Huracan-Tecnica-60th-Anniversary-Edition-Charlotte-NC/seo/ECL3587-ZHWUB6ZF9PLA25049/sz_261584/w_387/cf1286d8894933889f31db149163e10c.jpg" class="card-img-top" alt="Car">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold text-dark">Car Model</h5>
+                        <p class="card-text text-muted">Price: $22,500</p>
+                        <button class="btn btn-outline-dark btn-block btn-lg" onclick="viewDetails('2')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Car 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="https://cdn-ds.com/stock/2023-Lamborghini-Huracan-Tecnica-60th-Anniversary-Edition-Charlotte-NC/seo/ECL3587-ZHWUB6ZF9PLA25049/sz_261584/w_387/cf1286d8894933889f31db149163e10c.jpg" class="card-img-top" alt="Car">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold text-dark">Car Model</h5>
+                        <p class="card-text text-muted">Price: $25,000</p>
+                        <button class="btn btn-outline-dark btn-block btn-lg" onclick="viewDetails('3')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Car 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-0">
+                    <img src="https://cdn-ds.com/stock/2023-Lamborghini-Huracan-Tecnica-60th-Anniversary-Edition-Charlotte-NC/seo/ECL3587-ZHWUB6ZF9PLA25049/sz_261584/w_387/cf1286d8894933889f31db149163e10c.jpg" class="card-img-top" alt="Car">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold text-dark">Car Model</h5>
+                        <p class="card-text text-muted">Price: $27,500</p>
+                        <button class="btn btn-outline-dark btn-block btn-lg" onclick="viewDetails('4')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mb-20">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                </li>
+                <li class="page-item active" aria-current="page">
+                    <span class="page-link">1</span>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    {% include "./comps/footer.html" %}
+
+</body>
+</html>
